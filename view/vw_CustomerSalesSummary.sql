@@ -8,7 +8,7 @@ SELECT
     c.ContactName,
     c.City,
     c.Country,
-    COUNT(DISTINCT o.OrderID) AS TotalOrders,                
+    COUNT(DISTINCT o.OrderID) AS TotalOrders, -- Total number of orders placed by the customer               
     SUM(od.Quantity * od.UnitPrice) AS TotalRevenue,           
     CASE 
         WHEN COUNT(DISTINCT o.OrderID) > 0 
